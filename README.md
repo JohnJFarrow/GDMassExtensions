@@ -14,5 +14,20 @@ In an existing project:
 
 ```
 cd Plugins (if this directory does not exist create it)
+git add Plugins (if you just made it)
 git submodule add https://github.com/JohnJFarrow/GDMassExtensions GDMassExtensions
+```
+
+In the root project directory
+
+```
+git add .gitmodules
+```
+
+## Updates
+
+To pull the submodule from each installed project:
+
+```
+git submodule update --remote --merge
 ```
