@@ -206,16 +206,6 @@ void FGameplayDebuggerCategory_MassExtensions::CollectData( APlayerController* O
 					const FVector::FReal ViewDot = FVector::DotProduct( DirToEntity.GetSafeNormal(), ViewDirection );
 					if ( ViewDot < MinViewDirDot )
 					{
-						if ( EntityIndex == 0 )
-						{
-							UE_LOG( LogTemp,
-									Log,
-									TEXT( "DirToEntity %s ViewDirection %s ViewDot %f MinViewDirDot %f" ),
-									*DirToEntity.ToString(),
-									*ViewDirection.ToString(),
-									ViewDot,
-									MinViewDirDot );
-						}
 						continue;
 					}
 
